@@ -53,7 +53,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     let botname = global.namebot || conn.user?.name || 'ᴇʀɪɴᴇ-ᴍᴅ | ᴘʀᴏᴊᴇᴄᴛ'
     let owner = global.nameown || 'Owner'
-    let version = global.version || '1.0.0'
+    let version = global.version || '10.0.8'
 
     // Definisi fkontak agar tidak undefined
     const fkontak = { 
@@ -111,6 +111,10 @@ ${global.dmenub2} ${toSmallCaps('Limit')} : ${limit}
 ${global.dmenub2} ${toSmallCaps('Role')}  : ${toSmallCaps(role)}
 ${global.dmenub2} XP    : ${totalexp}
 ${global.dmenuf}
+
+ᴋᴇᴛɪᴋ .ᴍᴇɴᴜ ᴀʟʟ ᴀᴛᴀᴜ ʜᴇʟᴘ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍᴘɪʟᴋᴀɴ sᴇᴍᴜᴀ
+ᴍᴇɴᴜ ɢᴜɴᴀᴋᴀɴ ʙᴏᴛ ɪɴɪ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ
+ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴇʀɪɴᴇ-ᴍᴅ : ʟʏɴɴ - 𝟹𝟻ƒᴘѕ
 `.trim()
 
     if (!menuType || (!categories[menuType] && menuType !== 'all')) {
