@@ -101,6 +101,7 @@ Kirim gambar dengan caption:
 
 ## ⚠️ Catatan
 
+- Run di node js 20-21
 - Gunakan bot dengan bijak.
 - Jangan spam command.
 - Beberapa fitur hanya bisa digunakan admin atau owner.
