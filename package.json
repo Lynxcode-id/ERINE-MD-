@@ -25,16 +25,16 @@
     "rpg-bot",
     "plugin-system"
   ],
-  "homepage": "https://github.com/himanackerman/RYO-YAMADA-MD-",
+  "homepage": "https://github.com/Lynxcode-id/ERINE-MD-",
   "author": {
     "name": "Lynx decode"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/himanackerman/RYO-YAMADA-MD-.git"
+    "url": "git+https://github.com/Lynxcode-id/ERINE-MD-.git"
   },
   "bugs": {
-    "url": "https://github.com/himanackerman/RYO-YAMADA-MD-/issues"
+    "url": "https://github.com/Lynxcode-id/ERINE-MD-/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
