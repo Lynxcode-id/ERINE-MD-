@@ -12,7 +12,7 @@ ${global.sgc || 'Belum diatur'}`
       footer: 'Pilih tombol di bawah',
       buttons: [
         { buttonId: '.linkgc', buttonText: { displayText: 'Link Group' }, type: 1 },
-        { buttonId: '.mediafire https://www.mediafire.com/file/zl3jlujto8wmp38/ERINE-MD.zip/file', buttonText: { displayText: 'Unduh SC Erine MD - Lynx V10' }, type: 1 },
+        { buttonId: '.mediafire https://www.mediafire.com/file/la0nkfkteud1dcf/ERINE-MD--main_%25281%2529.zip/file', buttonText: { displayText: 'Unduh SC Erine MD - Lynx V10' }, type: 1 },
         { buttonId: '.owner', buttonText: { displayText: 'Developer' }, type: 1 }
       ],
       headerType: 1
