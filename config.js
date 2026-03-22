@@ -76,8 +76,8 @@ global.psaweria = 'https://saweria.co/LynxPreset'
 
 /* ===== MENU MEDIA ===== */
 global.menuThumb = 'https://c.termai.cc/i174/WqP0sWo.jpg' // thumbnail menu
-global.menuAudio = 'https://c.termai.cc/a104/F3Po3.mp3' // sound menu
-global.videothumb = 'https://files.catbox.moe/0dkwfe.mp4' //buat video/gif di allmenunya ngab wkwk
+global.menuAudio = 'https://c.termai.cc/a130/YYZnl.mp3' // sound menu
+global.videothumb = 'https://c.termai.cc/v188/CHBtAz.mp4' //buat video/gif di allmenunya ngab wkwk
 
 /*============= CHANNEL =============*/
 global.chId = '120363400411310874@newsletter' // id CH
