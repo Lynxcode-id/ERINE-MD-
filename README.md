@@ -2,12 +2,12 @@
   <img src="https://raw.githubusercontent.com/himanackerman/Image/main/1768265694471-117.jpeg" width="380"/>
 </p>
 
-<h1 align="center">RYO YAMADA MD</h1>
+<h1 align="center">ERINE MD</h1>
 <p align="center"><b>WhatsApp Multi-Device Bot</b></p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/himanackerman/RYO-YAMADA-MD-?style=flat-square">
-  <img src="https://img.shields.io/github/forks/himanackerman/RYO-YAMADA-MD-?style=flat-square">
+  <img src="https://img.shields.io/github/stars/Lynxcode-id/ERINE-MD-">
+  <img src="https://img.shields.io/github/forks/Lynxcode-id/ERINE-MD-">
   <a href="https://whatsapp.com/channel/0029Vb1CcDWDp2Q5YT4FZn1k">
     <img src="https://img.shields.io/badge/WHATSAPP_CHANNEL-25D366?style=flat-square&logo=whatsapp&logoColor=white">
   </a>
