@@ -110,8 +110,10 @@ Kirim gambar dengan caption:
 
 ## ❤️ Thanks
 
-Base by **ShirokamiRyzen**  
+Base by **Ryo Yamada**
+Base Utama by **ShirokamiRyzen**  
 https://github.com/ShirokamiRyzen/Nao-MD
+https://github.com/himanackerman/RYO-YAMADA-MD
 
 ---
 
