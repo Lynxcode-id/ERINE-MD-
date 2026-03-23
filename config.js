@@ -4,6 +4,8 @@
  * Based on Nao ESM
  * Pengembang¹ :Hlman Ryo
  * Pengembang² : Lynx code
+ * Ikuti saluran kami untuk info update project ini
+ * https://whatsapp.com/channel/0029Vb1CcDWDp2Q5YT4FZn1k
  **/
 
 import { watchFile, unwatchFile } from 'fs'
@@ -11,7 +13,8 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone'
 
-/*============= WAKTU =============*/
+/*============= SET WAKTU =============*/
+
 let wibh = moment.tz('Asia/Makassar').format('HH')
 let wibm = moment.tz('Asia/Makassar').format('mm')
 let wibs = moment.tz('Asia/Makassar').format('ss')
@@ -31,10 +34,11 @@ const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 /*============= MAIN INFO =============*/
+
 global.owner = [['6288258041396', 'ʟʏɴx ᴅᴇᴄᴏᴅᴇ', true]] // Ganti ini yah
 global.mods = []
 global.prems = []
-global.nomorbot = '639977961412' // pake no bot kalian
+global.nomorbot = '6285185681661' // pake no bot kalian
 global.nomorown = '6288258041396'// pake no utama kalian
 global.nameown = 'ʟʏɴx ᴅᴇᴄᴏᴅᴇ' // nama owner
 global.version = '10.0.2' // Versi sc ( ini beta version )
@@ -42,6 +46,7 @@ global.autotyping = false // default mati
 global.autorecording = false // default mati
 
 /*============= WATERMARK =============*/
+
 global.readMore = readMore
 global.author = 'ᴇʀɪɴᴇ ᴘʀᴏᴊᴇᴄᴛ'
 global.namebot = 'ᴇʀɪɴᴇ-ᴍᴅ ~ ᴇʀɪɴᴇ ᴘᴇᴏᴊᴇᴄᴛ'
@@ -55,6 +60,7 @@ global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 
 /*============= SOSMED =============*/
+
 global.sig = 'https://www.instagram.com/lynnnx_35fps'
 global.sgh = '-'
 global.sgc = 'https://chat.whatsapp.com/D0i9bk7QHc67iLd3HZGNJs'
@@ -62,7 +68,9 @@ global.sgw = '_'
 global.sdc = '-'
 global.sfb = ''
 global.snh = ''
-// ================= Cpanel ========================================
+
+/*================= Untuk Cpanel ========================*/
+
 global.egg = "15" // gausah di ubah
 global.nestid = "5" // gausah diubah
 global.loc = "1" // gausah diubah
@@ -71,19 +79,46 @@ global.apikey = "-" // apikey / plta lu
 global.capikey = "-" // capikey / pltc lu
 
 /*============= DONASI =============*/
-global.qris = 'https://c.termai.cc/i119/hZR1g.jpg'
-global.psaweria = 'https://saweria.co/LynxPreset'
+
+global.qris = 'https://c.termai.cc/i119/hZR1g.jpg' // Qrismu 
+global.psaweria = 'https://saweria.co/LynxPreset' // Saweriamu
 
 /* ===== MENU MEDIA ===== */
-global.menuThumb = 'https://c.termai.cc/i174/WqP0sWo.jpg' // thumbnail menu
-global.menuAudio = 'https://c.termai.cc/a130/YYZnl.mp3' // sound menu
-global.videothumb = 'https://c.termai.cc/v188/CHBtAz.mp4' //buat video/gif di allmenunya ngab wkwk
+
+global.menuThumb = 'https://c.termai.cc/i174/WqP0sWo.jpg'
+global.menuAudio = 'https://c.termai.cc/a130/YYZnl.mp3'
+global.videothumb = 'https://c.termai.cc/v188/CHBtAz.mp4'
+
+// KETERANGAN
+// menuThumb : untuk thumbnail utama bot
+// menuAudio : untuk musik all menu - menu
+// videothumb : untuk vidio gif all menu 
+
+/*============ Update Notif Idn =========*/
+
+export const GROUP_IDS = [
+    "120363166736262014@g.us",
+    "120363161553336082@g.us",
+    "120363395548328688@g.us",
+    "120363426323468560@g.us"
+];
+export const CHANNEL_IDS = [
+    "120363251106848970@newsletter",
+    "120363296632130473@newsletter",
+    "120363400411310874@newsletter"
+];
+
+// KETERANGAN
+// channel_ids : isi dengan idch kamu
+// group_ids : isi dengan idgc kamu
 
 /*============= CHANNEL =============*/
-global.chId = '120363400411310874@newsletter' // id CH
-global.newsletterName = '「 🐣 ᴇʀɪɴᴇ-ᴍᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ 」' // anu 
+
+global.chId = '120363400411310874@newsletter' // id chmu
+global.newsletterName = '「 🐣 ᴇʀɪɴᴇ-ᴍᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ 」' // nama chmu
 
 /*============= TAMPILAN =============*/
+
 global.dmenut = '𖠌 ┈┈┈〈' //top
 global.dmenub = '┊↬' //body
 global.dmenub2 = '┊' //body for info cmd on Default menu
@@ -103,10 +138,12 @@ global.htjava = ''    //hiasan Doang :v
 global.hsquere = ['✿', '❀', '✮']
 
 /* ===== WELCOME & GOODBYE BACKGROUND ===== */
+
 global.welcomeBg = 'https://c.termai.cc/i140/snh8Knp.jpg'
 global.goodbyeBg = 'https://files.catbox.moe/73uy2u.jpg'
 
 /*============= RESPON =============*/
+
 global.wait = '✨ ᴛᴜɴɢɢᴜ ʙᴇɴᴛᴀʀ ᴇʀɪɴᴇ ᴍᴀᴋᴀɴ...'
 global.eror = '🐣 ʏᴀʜ ᴇʀʀᴏʀ ɴɪʜ ᴜʟᴀɴɢ ʟᴀɢɪ ɴᴀɴᴛɪ ʏᴀ!'
 
