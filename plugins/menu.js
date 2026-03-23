@@ -3,7 +3,7 @@
  * Base Nao ESM 
  * Info script di CH https://whatsapp.com/channel/0029VbAYjQgKrWQulDTYcg2K
  **/
- 
+
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 import fs from 'fs'
@@ -12,7 +12,7 @@ moment.locale('id')
 
 const THUMB = global.menuThumb
 const MENU_SOUND = global.menuAudio
-const VIDEO_GIF = global.videothumb // Pastikan ini link video/mp4 di config.js
+const VIDEO_GIF = global.videothumb 
 
 const mapFrom = 'abcdefghijklmnopqrstuvwxyz1234567890'
 const mapTo = [
@@ -37,9 +37,8 @@ function formatTag(tag) {
 }
 
 function randomSquare() {
-  return Array.isArray(global.hsquere)
-    ? global.hsquere[Math.floor(Math.random() * global.hsquere.length)]
-    : ''
+  const squares = ['▧', '▢', '▣', '▤', '▥', '▦', '▧', '▨', '▩']
+  return squares[Math.floor(Math.random() * squares.length)]
 }
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
@@ -53,27 +52,15 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     let botname = global.namebot || conn.user?.name || 'ᴇʀɪɴᴇ-ᴍᴅ | ᴘʀᴏᴊᴇᴄᴛ'
     let owner = global.nameown || 'Owner'
-    let version = global.version || '10.0.8'
+    let version = global.version || '1.0.0'
 
-    // Definisi fkontak agar tidak undefined
     const fkontak = { 
-        key: { 
-            participant: `0@s.whatsapp.net`, 
-            ...(m.chat ? { remoteJid: `status@broadcast` } : {}) 
-        }, 
-        message: { 
-            'contactMessage': { 
-                'displayName': owner, 
-                'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${owner},;;;\nFN:${owner}\nitem1.TEL;waid=${who.split('@')[0]}:${who.split('@')[0]}\nitem1.X-ABLabel:Mobile\nEND:VCARD`, 
-                'jpegThumbnail': THUMB, 
-                thumbnail: THUMB, 
-                sendEphemeral: true
-            }
-        }
+        key: { participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, 
+        message: { 'contactMessage': { 'displayName': owner, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${owner},;;;\nFN:${owner}\nitem1.TEL;waid=${who.split('@')[0]}:${who.split('@')[0]}\nitem1.X-ABLabel:Mobile\nEND:VCARD`, 'jpegThumbnail': THUMB, thumbnail: THUMB, sendEphemeral: true } }
     }
 
-    let limit = (isOwner || user.premiumTime >= 1) ? '∞ Unlimited' : user.limit
-    let role = isOwner ? 'Owner' : (user.role || 'Newbie')
+    let limit = (isOwner || user.premiumTime >= 1) ? '∞ ᴜɴʟɪᴍɪᴛᴇᴅ' : user.limit
+    let role = isOwner ? 'ᴏᴡɴᴇʀ' : (user.role || 'ɴᴇᴡʙɪᴇ')
     let totalexp = user.totalexp || user.exp || 0
 
     let plugins = Object.values(global.plugins || {}).filter(p => !p.disabled)
@@ -93,36 +80,45 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     let menuType = (text || '').toLowerCase().trim()
     let arrayMenu = Object.keys(categories).sort()
 
-    // Logika Tampilan Menu
+    // --- HEADER MENU ---
     let headerCaption = `
-${toSmallCaps('Hai, aku')} *${toSmallCaps('ᴇʀɪɴᴇ-ᴍᴅ')}*,
-${toSmallCaps('siap bantu kamu hari ini — pilih menu yang kamu butuhin ya.')}
+${global.htjava} *${toSmallCaps('ᴅᴀsʜʙᴏᴀʀᴅ ᴇʀɪɴᴇ')}*
 
-${global.dashmenu} ${global.htjava}
+${toSmallCaps('ʜᴀɪ')}, @${who.split('@')[0]}
+${toSmallCaps('ꜱɪᴀᴘ ʙᴀɴᴛᴜ ᴋᴀᴍᴜ ʜᴀʀɪ ɪɴɪ — ᴘɪʟɪʜ ᴍᴇɴᴜ ʏᴀɴɢ ᴋᴀᴍᴜ ʙᴜᴛᴜʜɪɴ.')}
 
-${global.dmenut} *${toSmallCaps('BOT INFO')}*
-${global.dmenub2} ${toSmallCaps('Bot')}     : ${toSmallCaps(botname)}
-${global.dmenub2} ${toSmallCaps('Owner')}   : ${toSmallCaps(owner)}
-${global.dmenub2} ${toSmallCaps('Version')} : ${version}
-${global.dmenuf}
+┌  • *${toSmallCaps('ʙᴏᴛ ɪɴꜰᴏ')}*
+│  ◦  ${toSmallCaps('ɴᴀᴍᴇ')} : ${toSmallCaps(botname)}
+│  ◦  ${toSmallCaps('ᴏᴡɴᴇʀ')} : ${toSmallCaps(owner)}
+│  ◦  ${toSmallCaps('ᴠᴇʀ')}   : ${version}
+└  ◦  ${toSmallCaps('ᴅᴀᴛᴇ')}  : ${moment.tz('Asia/Makassar').format('DD/MM/YY')}
 
-${global.dmenut} *${toSmallCaps('USER INFO')}*
-${global.dmenub2} ${toSmallCaps('Limit')} : ${limit}
-${global.dmenub2} ${toSmallCaps('Role')}  : ${toSmallCaps(role)}
-${global.dmenub2} XP    : ${totalexp}
-${global.dmenuf}
+┌  • *${toSmallCaps('ᴜsᴇʀ ɪɴꜰᴏ')}*
+│  ◦  ${toSmallCaps('ʟɪᴍɪᴛ')} : ${limit}
+│  ◦  ${toSmallCaps('ʀᴏʟᴇ')}  : ${toSmallCaps(role)}
+└  ◦  ${toSmallCaps('ᴇxᴘ')}   : ${totalexp}
 
-ᴋᴇᴛɪᴋ .ᴍᴇɴᴜ ᴀʟʟ ᴀᴛᴀᴜ ʜᴇʟᴘ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍᴘɪʟᴋᴀɴ sᴇᴍᴜᴀ
+┌  • *${toSmallCaps('ᴋᴇᴛᴇʀᴀɴɢᴀɴ')}*
+│  ◦  Ⓟ = ${toSmallCaps('ᴘʀᴇᴍɪᴜᴍ')}
+│  ◦  Ⓛ = ${toSmallCaps('ʟɪᴍɪᴛ')}
+│  ◦  Ⓞ = ${toSmallCaps('ᴏᴡɴᴇʀ')}
+└  ◦  Ⓐ = ${toSmallCaps('ᴀᴅᴍɪɴ')}
+
+${toSmallCaps('ᴋᴇᴛɪᴋ')} *.help <nama_kategori>*
+${toSmallCaps('ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ᴅᴀꜰᴛᴀʀ ᴘᴇʀ ᴋᴀᴛᴇɢᴏʀɪ.')}
+
+ᴋᴇᴛɪᴋ .ᴍᴇɴᴜ ᴀʟʟ ᴀᴛᴀᴜ .ʜᴇʟᴘ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍᴘɪʟᴋᴀɴ sᴇᴍᴜᴀ
 ᴍᴇɴᴜ ɢᴜɴᴀᴋᴀɴ ʙᴏᴛ ɪɴɪ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ
 ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴇʀɪɴᴇ-ᴍᴅ : ʟʏɴɴ - 𝟹𝟻ƒᴘѕ
 `.trim()
 
+    // --- TAMPILAN JIKA TIDAK PILIH KATEGORI ---
     if (!menuType || (!categories[menuType] && menuType !== 'all')) {
-      // MENU UTAMA DENGAN GIF VIDEO
       await conn.sendMessage(m.chat, {
           video: { url: VIDEO_GIF },
           gifPlayback: true,
           caption: headerCaption,
+          mentions: [who],
           contextInfo: {
               forwardingScore: 999,
               isForwarded: true,
@@ -131,8 +127,8 @@ ${global.dmenuf}
                   newsletterJid: "120363400411310874@newsletter"
               },
               externalAdReply: {
-                  title: botname,
-                  body: owner,
+                  title: `Ｅ Ｒ Ｉ Ｎ Ｅ  -  Ｍ Ｄ  Ｖ${version}`,
+                  body: `Active Period: ${moment.tz('Asia/Makassar').format('HH:mm:ss')}`,
                   thumbnailUrl: THUMB,
                   sourceUrl: 'https://github.com/Lynxcode-id',
                   mediaType: 1,
@@ -145,26 +141,32 @@ ${global.dmenuf}
       return
     }
 
-    // MENU LIST (Kategori Spesifik / ALL)
-    let menuText = []
+    // --- MENU LIST (LOGIKA BARU) ---
+    let menuText = [`${toSmallCaps('ᴍᴇɴᴜ ʟɪsᴛ')} - ${menuType.toUpperCase()}\n`]
     let targets = menuType === 'all' ? arrayMenu : [menuType]
 
-    for (let tag of targets) {
-      menuText.push(`${global.cmenut}${randomSquare()} ${toSmallCaps(formatTag(tag))} ${randomSquare()}${global.cmenuh}`)
-      for (let item of categories[tag]) {
-        for (let cmd of item.helps) {
-          let flag = (item.premium ? ` ${global.lopr}` : '') + (item.limit ? ` ${global.lolm}` : '') + (item.owner ? ' Ⓞ' : '') + (item.admin ? ' Ⓐ' : '')
-          let prefix = item.prefix ? usedPrefix : ''
-          menuText.push(`${global.cmenub}${prefix}${toSmallCaps(cmd)}${flag}`)
+    for (const tag of targets) {
+      menuText.push(`┌──  ${randomSquare()} *${toSmallCaps(formatTag(tag))}*`)
+
+      for (const item of categories[tag]) {
+        for (const cmd of item.helps) {
+          const prefix = item.prefix ? usedPrefix : ''
+          let info = ''
+          if (item.premium) info += ' Ⓟ'
+          if (item.limit) info += ' Ⓛ'
+          if (item.owner) info += ' Ⓞ'
+          if (item.admin) info += ' Ⓐ'
+
+          menuText.push(`│ ◦ ${prefix}${toSmallCaps(cmd)}${info}`)
         }
       }
-      menuText.push(global.cmenuf)
+      menuText.push(`└───────────────\n`)
     }
 
     await conn.sendMessage(m.chat, {
         video: { url: VIDEO_GIF },
         gifPlayback: true,
-        caption: menuText.join('\n'),
+        caption: menuText.join('\n').trim(),
         contextInfo: {
             forwardingScore: 999,
             isForwarded: true,
@@ -174,7 +176,7 @@ ${global.dmenuf}
             },
             externalAdReply: {
                 title: botname,
-                body: owner,
+                body: `Category: ${menuType}`,
                 thumbnailUrl: THUMB,
                 mediaType: 1,
                 renderLargerThumbnail: true
