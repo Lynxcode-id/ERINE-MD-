@@ -33,5 +33,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['bratb'];
 handler.tags = ['tools'];
 handler.command = /^bratb$/i;
+handler.limit = true
 
 export default handler;

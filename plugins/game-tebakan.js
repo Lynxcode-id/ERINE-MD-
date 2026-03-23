@@ -26,6 +26,7 @@ Bonus: ${poin} XP
 handler.help = ['tebaktebakan']
 handler.tags = ['game']
 handler.command = /^tebaktebakan$/i
+handler.limit = true
 
 handler.onlyprem = true
 handler.game = true

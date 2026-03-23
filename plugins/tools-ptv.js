@@ -29,4 +29,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ["toptv *[reply/send media]*"];
 handler.tags = ["tools"];
 handler.command = ["toptv"];
+handler.limit = true
+handler.admin = true
+
 export default handler;

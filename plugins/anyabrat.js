@@ -40,5 +40,6 @@ handler.help = ['anyabrat <teks>']
 handler.tags = ['sticker']
 handler.command = /^anyabrat$/i
 handler.limit = true
+handler.register = true
 
 export default handler

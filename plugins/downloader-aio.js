@@ -32,5 +32,6 @@ handler.help = ['aio <url>']
 handler.tags = ['downloader']
 handler.command = /^aio$/i
 handler.limit = true
+handler.register = true
 
 export default handler

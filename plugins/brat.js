@@ -38,7 +38,7 @@ handler.help = ['brat <text>']
 handler.tags = ['sticker']
 handler.command = /^(brat)$/i
 handler.limit = true
-handler.register = false
+handler.register = true
 handler.group = false
 
 export default handler

@@ -91,5 +91,6 @@ ${Object.keys(AvailableVoices).join(", ")}`)
 handler.help = ['ttsvoice <model> <teks>']
 handler.tags = ['voice']
 handler.command = /^ttsvoice$/i
+handler.limit = true
 
 export default handler

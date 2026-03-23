@@ -40,6 +40,7 @@ let handler = async (m, { conn, groupMetadata, usedPrefix, command, text }) => {
 handler.help = ['top [jumlah] [teks]']
 handler.tags = ['fun']
 handler.command = /^top$/i
+handler.limit = true
 handler.group = true
 
 export default handler

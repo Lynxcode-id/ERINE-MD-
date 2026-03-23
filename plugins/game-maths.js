@@ -79,7 +79,7 @@ let handler = async (m, { conn, text }) => {
 handler.command = /^maths$/i
 handler.tags = ["game"]
 handler.help = ["maths"]
-handler.limit = false
+handler.limit = true
 
 // Auto-check jawaban
 handler.all = async function (m) {

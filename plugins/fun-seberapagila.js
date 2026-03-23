@@ -23,6 +23,6 @@ let handler = async (m, { text }) => {
 handler.help = ['seberapagila <nama opsional>']
 handler.tags = ['fun']
 handler.command = /^seberapagila$/i
-handler.limit = false
+handler.limit = true
 
 export default handler

@@ -15,6 +15,7 @@ let handler = async (m, { conn, command, text }) => {
 handler.help = ['cektt *<name>*']
 handler.tags = ['fun']
 handler.command = /^cekpentil|cektt/i
+handler.limit = true
 
 export default handler
 

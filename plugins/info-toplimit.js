@@ -18,6 +18,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ['toplimit']
 handler.tags = ['info']
 handler.command = /^toplimit$/i
-handler.limit = false
+handler.limit = true
 
 export default handler

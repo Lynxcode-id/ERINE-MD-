@@ -83,5 +83,6 @@ handler.command = /^(work)$/i
 handler.group = true
 handler.register = true
 handler.rpg = true
+handler.limit = true
 
 export default handler

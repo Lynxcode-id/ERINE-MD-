@@ -4,6 +4,7 @@ let handler  = async (m, { conn }) => {
 handler.help = ['cantikcek']
 handler.tags = ['fun']
 handler.command = /^(cantikcek|cekcantik)$/i
+handler.limit = true
 
 export default handler
 

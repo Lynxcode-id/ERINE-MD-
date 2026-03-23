@@ -6,6 +6,7 @@ let handler = async(m, { conn, text }) => {
 handler.help = ['tebakumur'].map(v => v + ' <name>')
 handler.tags = ['fun']
 handler.command = /^(tebakumur)$/i
+handler.limit = true
 export default handler
 
 const umur = [

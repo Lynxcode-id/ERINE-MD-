@@ -17,5 +17,6 @@ handler.help = ['rvo']
 handler.tags = ['tools']
 handler.command = /^rvo$/i
 handler.limit = true
+handler.admin = true
 
 export default handler

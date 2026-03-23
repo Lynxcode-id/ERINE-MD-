@@ -8,5 +8,6 @@ let handler = async (m, { command, text }) => m.reply(`
 handler.help = ['apakah <teks>?']
 handler.tags = ['fun']
 handler.command = /^apakah$/i
+handler.limit = true
 
 export default handler

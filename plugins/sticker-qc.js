@@ -65,5 +65,6 @@ handler.help = ['qc <warna>|<teks>', 'qc <teks>']
 handler.tags = ['sticker']
 handler.command = /^qc$/i
 handler.limit = true
+handler.register = true
 
 export default handler

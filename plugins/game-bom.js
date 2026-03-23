@@ -42,6 +42,7 @@ let handler = async (m, {
 
 handler.help = ["bomb"];
 handler.tags = ["game"];
+handler.limit = true;
 handler.command = /^(bomb)$/i;
 
 export default handler;

@@ -70,5 +70,6 @@ ${usedPrefix}${command} ${text}` : ''))
 handler.help = ['tictactoe', 'ttt']
 handler.tags = ['game']
 handler.command = /^(tictactoe|t{3})$/
+handler.limit = true
 
 export default handler

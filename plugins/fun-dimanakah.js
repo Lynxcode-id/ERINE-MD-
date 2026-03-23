@@ -12,6 +12,7 @@ handler.help = ['dimanakah <pertanyaan>']
 handler.tags = ['fun']
 handler.command = /^dimanakah$/i
 handler.owner = false
+handler.limit = true
 
 export default handler
 

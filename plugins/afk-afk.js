@@ -7,5 +7,6 @@ var handler = async (m, { text }) => {
   handler.help = ['afk <alasan>']
   handler.tags = ['main']
   handler.command = /^afk$/i
-  
+  handler.limit = true
+
   export default handler

@@ -48,6 +48,6 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['spotify2 <url>']
 handler.command = ['spotify2']
 handler.tags = ['downloader']
-handler.limit = false
+handler.limit = true
 
 export default handler

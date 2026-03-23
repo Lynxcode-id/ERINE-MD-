@@ -70,5 +70,6 @@ handler.help = ['upscale']
 handler.tags = ['tools', 'image']
 handler.command = ['upscale', 'hd', 'remini']
 handler.limit = true
+handler.register = true
 
 export default handler

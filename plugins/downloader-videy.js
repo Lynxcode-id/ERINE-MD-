@@ -27,5 +27,6 @@ handler.command = ['videy']
 handler.tags = ['downloader']
 handler.help = ['videy <url>']
 handler.premium = true
+handler.register = true
 
 export default handler

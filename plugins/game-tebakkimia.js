@@ -83,7 +83,7 @@ handler.all = async function (m) {
 handler.help = ["tebakkimia"]
 handler.tags = ["game"]
 handler.command = /^(tebakkimia|whokimia)$/i
-handler.limit = false
+handler.limit = true
 handler.game = true
 
 export default handler

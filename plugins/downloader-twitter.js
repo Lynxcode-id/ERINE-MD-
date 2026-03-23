@@ -88,6 +88,6 @@ handler.help = ['twitter'];
 handler.tags = ['downloader'];
 handler.command = /^(twitter|tw|xdl)$/i;
 handler.limit = true;
-handler.register = false; // true kan jika ada fitur register atau daftar di bot mu.
+handler.register = true; // true kan jika ada fitur register atau daftar di bot mu.
 
 export default handler;

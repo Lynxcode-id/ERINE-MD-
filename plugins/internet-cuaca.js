@@ -171,5 +171,6 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['cuaca']
 handler.command = ['cuaca', 'weather']
 handler.tags = ['tools']
+handler.limit = true
 
 export default handler

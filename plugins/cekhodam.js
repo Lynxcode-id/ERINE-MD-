@@ -25,6 +25,7 @@ let handler = async (m, { conn, command, text }) => {
 handler.help = ['cekkhodam *<name>*']
 handler.tags = ['fun']
 handler.command = /^cekkhodam/i
+handler.limit = true
 
 export default handler
 

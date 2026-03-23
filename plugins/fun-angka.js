@@ -24,6 +24,7 @@ Apakah Angkamu Dengan Aku Sama?
 handler.help = ['angka <0-9>']
 handler.tags = ['fun']
 handler.command = /^angka/i
+handler.limit = true
 
 handler.tigame = true
 handler.fail = null

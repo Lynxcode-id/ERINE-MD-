@@ -380,5 +380,6 @@ const handler = async (m, { conn, usedPrefix, command, args }) => {
 handler.command = ['blackjack'];
 handler.tags = ['game'];
 handler.help = ['blackjack'];
+handler.limit = true;
 
 export default handler;

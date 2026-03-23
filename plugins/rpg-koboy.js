@@ -124,6 +124,7 @@ ${"・".repeat(criminalPosition)}🥷${"・".repeat(5 - criminalPosition)}
 handler.help = ['koboy'];
 handler.tags = ['rpg'];
 handler.command = /^(koboy)$/i;
+handler.limit = true
 handler.disabled = false;
 
 export default handler;

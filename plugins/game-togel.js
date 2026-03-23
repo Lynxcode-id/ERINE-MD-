@@ -72,7 +72,7 @@ Salah🙄
 handler.help = ['togel', 'angka', 'stoptogel'];
 handler.tags = ['game'];
 handler.command = /^(togel|angka|stoptogel)$/i;
-handler.limit = false;
+handler.limit = true;
 handler.fail = null;
 handler.private = true;
 

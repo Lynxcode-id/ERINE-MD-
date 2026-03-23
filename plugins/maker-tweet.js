@@ -54,6 +54,6 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.command = ['tweet'];
 handler.tags = ['maker'];
 handler.help = ['tweet <nama>,<username>,<teks>'];
-handler.limit = false;
+handler.limit = true;
 
 export default handler;

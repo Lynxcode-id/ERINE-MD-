@@ -15,6 +15,8 @@ let handler = async (m, { conn, command, text }) => {
 handler.help = ['cekkontol *<name>*']
 handler.tags = ['fun']
 handler.command = /^cekkontol/i
+handler.register = true
+handler.limit = true
 
 export default handler
 

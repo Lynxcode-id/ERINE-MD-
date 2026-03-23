@@ -34,5 +34,6 @@ handler.help = ['bratvid <teks>']
 handler.tags = ['sticker']
 handler.command = /^bratvid$/i
 handler.limit = true
+handler.register = true
 
 export default handler

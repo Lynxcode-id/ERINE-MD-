@@ -271,6 +271,6 @@ ${populerResults.top.map((anime, index) => `${index + 1}. ${anime.title} (Rank: 
 handler.help = ['anilist'].map(v => v + ' <search|detail|populer> <query>');
 handler.command = /^(anilist)$/i;
 handler.tags = ['anime']
-handler.limit = false;
+handler.limit = true;
 
 export default handler;

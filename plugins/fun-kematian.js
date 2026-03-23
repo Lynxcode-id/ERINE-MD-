@@ -30,6 +30,6 @@ let handler = async (m, { text }) => {
 handler.help = ['kematian <nama opsional>']
 handler.tags = ['fun']
 handler.command = /^kematian$/i
-handler.limit = false
+handler.limit = true
 
 export default handler

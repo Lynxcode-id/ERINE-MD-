@@ -21,6 +21,6 @@ let handler = async (m, { text }) => {
 handler.help = ['ramal <nama opsional>']
 handler.tags = ['fun']
 handler.command = /^ramal$/i
-handler.limit = false
+handler.limit = true
 
 export default handler

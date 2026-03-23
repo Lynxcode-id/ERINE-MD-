@@ -73,6 +73,6 @@ const handler = async (m, { conn, text }) => {
 handler.help = ['s2c <url>'];
 handler.command = ['screenshot2code', 's2c'];
 handler.tags = ['tools'];
-handler.limit = false;
+handler.limit = true;
 
 export default handler;

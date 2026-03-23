@@ -11,6 +11,7 @@ handler.help = ['benarkah'].map(v => v + ' <text>')
 handler.tags = ['fun']
 handler.command = /^benarkah/i
 handler.owner = false
+handler.limit = true
 
 export default handler
 

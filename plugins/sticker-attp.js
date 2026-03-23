@@ -177,6 +177,6 @@ let handler = async (m, { conn, text, command }) => {
 handler.help = ['ttp', 'attp'];
 handler.command = /^(ttp|attp)$/i;
 handler.tags = ["sticker"]
-handler.limit = false;
+handler.limit = true;
 
 export default handler;

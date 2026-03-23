@@ -11,9 +11,9 @@ let handler = async (m, { conn }) => {
       {
         name: 'cta_url',
         buttonParamsJson: JSON.stringify({
-          display_text: '🔥 ᴍʏ ᴛᴇʟᴇɢʀᴀᴍ',
-          url: 't.me/lynxmanuelz4',
-          merchant_url: 't.me/lynxmanuelz4'
+          display_text: '🌟 My Script',
+          url: 'https://github.com/Lynxcode-id/ERINE-MD-',
+          merchant_url: 'https://github.com/Lynxcode-id/ERINE-MD-'
         })
       },
       {

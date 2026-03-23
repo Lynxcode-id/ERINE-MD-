@@ -48,6 +48,6 @@ const handler = async (m, { conn, args }) => {
 handler.help = ['genshinprofile'].map((v) => v + ' <uid>');
 handler.command = /^(genshinprofile)$/i;
 handler.tags = ["game"]
-handler.limit = false;
+handler.limit = true;
 
 export default handler;

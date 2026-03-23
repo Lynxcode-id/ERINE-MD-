@@ -49,5 +49,6 @@ let handler = async (m, { conn }) => {
 handler.help = ['totalfitur']
 handler.tags = ['info']
 handler.command = ['totalfitur']
+handler.limit = true
 
 export default handler

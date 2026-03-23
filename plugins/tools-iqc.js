@@ -28,5 +28,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['iqc jam|batre|pesan']
 handler.tags = ['maker']
 handler.command = ['iqc']
+handler.limit = true
 
 export default handler

@@ -22,6 +22,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 handler.help = ['kuis']
 handler.tags = ['game']
 handler.command = /^(kuis)$/i
+handler.limit = true
 handler.disable = true
 
 export default handler

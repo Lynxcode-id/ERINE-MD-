@@ -46,5 +46,6 @@ handler.help = ['sipaling <teks>']
 handler.command = ['sipaling']
 handler.tags = ['fun']
 handler.group = true
+handler.limit = true
 
 export default handler
